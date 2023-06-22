@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in</title>
+</head>
+
+<body>
+    <div id="main">
+        <h2 id="signIn">Sign in</h2>
+        <form method="post" name="sign_in" id="formId">
+            <!-- <label for="usernamelbl">Username:</label> -->
+            <input type="text" class="inputText" name="username" placeholder="Username">
+            <!-- <label for="passwordlbl">Password:</label> -->
+            <input type="password" class="inputText" name="password" placeholder="Password">
+            <button>Sign in</button>
+        </form>
+    </div>
+
+    <script>
+        var form = document.getElementById("formId");
+        function submitForm(event) {
+            event.preventDefault();
+        }
+        form.addEventListener('submit', submitForm);
+    </script>
+</body>
+
+</html>

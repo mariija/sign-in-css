@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    background: rgb(213, 159, 211);
+    background: linear-gradient(-50deg, rgba(213, 159, 211, 1) 23%, rgba(168, 228, 218, 1), rgb(171, 240, 185), rgb(187, 132, 195));
+    height: 100vh;
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#main {
+    top: 45%;
+    left: 50%;
+    width: 30em;
+    height: 16em;
+    margin-top: -9em;
+    margin-left: -15em;
+    /* border: 1px solid salmon;
+    background-color: rgb(211, 247, 255); */
+    position: fixed;
+}
+
+#signIn {
+    position: relative;
+    left: 7em;
+    font-size: 1.8em;
+    font-weight: 200;
+}
+
+form {
+    position: relative;
+    left: 6.5em;
+}
+
+.inputText {
+    display: block;
+    height: 2em;
+    width: 20em;
+    padding-top: 0.8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-style: none none none solid;
+    border-width: 1em;
+    border-color: salmon;
+    background: rgb(254, 254, 254);
+}
+
+button {
+    border-style: none none none solid;
+    border-width: 1em;
+    border-color: salmon;
+    background: white;
+    height: 2.5em;
+    width: 10em;
+    text-align: left;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.41);
+    cursor: pointer;
+}
+
+button:hover {
+    animation: buttonAnimation 2s ease infinite;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        border-color: salmon;
+        background: white;
+    }
+
+    50% {
+        border-color: white;
+        background: salmon;
+        color: white;
+    }
+
+    100% {
+        border-color: salmon;
+        background: white;
+    }
+}
+
+@media (max-width: 653px) {
+    .inputText {
+        width: 50%;
+    }
+}
